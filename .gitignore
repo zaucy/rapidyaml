@@ -48,3 +48,7 @@ rapidyaml.egg-info/
 # amalgamation files
 src/c4/c4core_all.hpp
 src_singleheader/
+
+# bazel
+/bazel-*
+/user.bazelrc

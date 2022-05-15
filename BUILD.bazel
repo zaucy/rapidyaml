@@ -1,0 +1,40 @@
+load("@rules_cc//cc:defs.bzl", "cc_library")
+
+package(default_visibility = ["//visibility:public"])
+
+cc_library(
+    name = "ryml",
+    includes = ["src"],
+    hdrs = [
+        "src/ryml.hpp",
+        "src/ryml_std.hpp",
+    ], 
+    srcs = [
+        "src/c4/yml/detail/checks.hpp",
+        "src/c4/yml/detail/parser_dbg.hpp",
+        "src/c4/yml/detail/print.hpp",
+        "src/c4/yml/detail/stack.hpp",
+        "src/c4/yml/common.hpp",
+        "src/c4/yml/common.cpp",
+        "src/c4/yml/emit.def.hpp",
+        "src/c4/yml/emit.hpp",
+        "src/c4/yml/export.hpp",
+        "src/c4/yml/node.hpp",
+        "src/c4/yml/node.cpp",
+        "src/c4/yml/parse.hpp",
+        "src/c4/yml/parse.cpp",
+        "src/c4/yml/preprocess.hpp",
+        "src/c4/yml/preprocess.cpp",
+        "src/c4/yml/std/map.hpp",
+        "src/c4/yml/std/std.hpp",
+        "src/c4/yml/std/string.hpp",
+        "src/c4/yml/std/vector.hpp",
+        "src/c4/yml/tree.hpp",
+        "src/c4/yml/tree.cpp",
+        "src/c4/yml/writer.hpp",
+        "src/c4/yml/yml.hpp",
+    ],
+    deps = [
+        "@com_github_biojppm_c4core//:c4core",
+    ],
+)
